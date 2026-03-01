@@ -1,0 +1,167 @@
+:root {
+  --color-bg: #000;
+  --color-text: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 84px;
+  margin-left: 120px;
+  gap: 20px;
+}
+
+.header__name {
+  font-size: clamp(2.25rem, 5vw, 4.5rem);
+}
+
+.photo-block {
+  max-width: 378px;
+  width: 100%;
+}
+
+.photo-placeholder {
+  height: 500px;
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subtitle-section {
+  margin-top: 2rem;
+}
+
+.subtitle {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.description {
+  margin-top: 2rem;
+  max-width: 700px;
+}
+
+.links {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.875rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  text-decoration: none;
+  color: var(--color-text);
+  border: 1px solid var(--color-text);
+  padding: 0.75rem 1.5rem;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+.tools {
+  margin-top: 5rem;
+}
+
+.tools-row {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.tool-icon {
+  width: 100px;
+  height: 100px;
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects {
+  margin-top: 5rem;
+}
+
+.project-cards {
+  margin-top: 2rem;
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 45%;
+  background: #111;
+  padding: 2rem;
+}
+
+.card-image {
+  height: 200px;
+  background: #333;
+  margin-bottom: 1rem;
+}
+
+.footer {
+  margin-top: 6rem;
+  padding: 3rem 0;
+  text-align: center;
+  border-top: 1px solid #222;
+}
+
+.social-icons {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+@media (max-width: 1023px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-cards {
+    flex-direction: column;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tools-row {
+    justify-content: center;
+  }
+}
