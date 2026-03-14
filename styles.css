@@ -116,6 +116,13 @@ body {
   gap: 20px;
 }
 
+.projects__card {
+  background: rgba(28, 28, 28, 1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
 .projects__image {
   position: relative;
   aspect-ratio: 16/9;
@@ -144,9 +151,32 @@ body {
 
 .projects__info {
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .projects__card-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.projects__description {
+  font-size: 1.125rem;
+  margin-bottom: 30px;
+}
+
+.projects__links {
+  display: flex;
+  gap: 20px;
+  margin-top: auto;
+}
+
+.projects__link {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* FOOTER */
@@ -166,6 +196,12 @@ body {
 }
 
 @media screen and (max-width: 1023px) {
+  .projects__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+  }
 }
 
 @media screen and (max-width: 767px) {
