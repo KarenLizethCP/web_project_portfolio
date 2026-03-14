@@ -10,10 +10,24 @@
 }
 
 body {
-  background-color: var(--color-bg);
+  background-color: rgba(17, 17, 17, 1);
   color: var(--color-text);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
+
+  background-image:
+    radial-gradient(circle, rgba(109, 109, 255, 0.2) 0%, transparent 70%),
+    radial-gradient(circle, rgba(109, 109, 255, 0.15) 0%, transparent 70%);
+
+  background-repeat: no-repeat;
+
+  background-size: 1000px 1000px;
+
+  background-position:
+    calc(50% - 200px) -300px,
+    calc(50% + -300px) bottom;
+
+  background-attachment: absolute;
 }
 
 .header {
@@ -134,6 +148,13 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.projects__overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
 }
 
 .projects__tools {
